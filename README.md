@@ -19,10 +19,10 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 
 To define the functions `check_guess` and `ask_for_input` for the Hangman game, I followed these steps:
 
-- First, I defined the check_guess function which takes a guessed letter as a parameter and checks if the letter is in the secret word. I passed the guess as a parameter to the function and converted it to lowercase to ensure that the game is case-insensitive.
-- Next, I defined the ask_for_input function which is responsible for asking the user to guess a letter, checking if the input is valid, and checking if the guess is in the secret word. The function will continue to ask for input until a valid guess is made.
-- I also called the check_guess function from within the ask_for_input function to check if the guess is in the secret word. The check_guess function takes the guess as a parameter.
-- Finally, I called the ask_for_input function outside the function definition to test the code.
+- First, I defined the `check_guess` function which takes a guessed letter as a parameter and checks if the letter is in the secret word. I passed the guess as a parameter to the function and converted it to lowercase to ensure that the game is case-insensitive.
+- Next, I defined the `ask_for_input` function which is responsible for asking the user to guess a letter, checking if the input is valid, and checking if the guess is in the secret word. The function will continue to ask for input until a valid guess is made.
+- I also called the `check_guess` function from within the `ask_for_input` function to check if the guess is in the secret word. The `check_guess` function takes the guess as a parameter.
+- Finally, I called the `ask_for_input` function outside the function definition to test the code.
 
 ## Milestone 4
 ### Class Definition
