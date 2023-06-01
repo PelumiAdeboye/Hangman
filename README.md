@@ -23,3 +23,28 @@ To define the functions "check_guess" and "ask_for_input" for the "Hangman" game
 - Next, I defined the ask_for_input function which is responsible for asking the user to guess a letter, checking if the input is valid, and checking if the guess is in the secret word. The function will continue to ask for input until a valid guess is made.
 - I also called the check_guess function from within the ask_for_input function to check if the guess is in the secret word. The check_guess function takes the guess as a parameter.
 - Finally, I called the ask_for_input function outside the function definition to test the code.
+
+## Milestone 4
+### Class Definition
+
+The Hangman class is defined in the `milestone_4` file. It has the following attributes:
+
+- `word_list`: A list of words from which the game selects a random word.
+- `num_lives`: The number of lives the player has to guess the word. Default value is 5.
+- `list_of_guesses`: A list that stores the letters guessed by the player.
+
+The class also has the following methods:
+
+- `__init__(self, word_list, num_lives=5)`: The initializer method that sets up the game. It takes the `word_list` and `num_lives` as parameters, where `word_list` is a list of words and `num_lives` is an optional parameter with a default value of 5. It initializes the attributes `word`, `word_guessed`, `num_letters`, and assigns a random word from `word_list` to `word`.
+- `check_guess(self, guess)`: A method that checks if the guessed letter is in the word. It takes a `guess` parameter and compares it to the letters in the word. If the guess is correct, it updates the `word_guessed` list and decreases the `num_letters` count. If the guess is incorrect, it reduces the `num_lives` count.
+- `ask_for_input(self)`: A method that asks the player to input a letter guess. It validates the input and checks if the guess has already been made. If the input is valid and a new guess, it calls the `check_guess` method and updates the `list_of_guesses`.
+
+### Usage
+
+To use the Hangman game, create an instance of the `Hangman` class with a word list and an optional number of lives. Then, call the `ask_for_input` method to start the game and interactively guess letters.
+
+Example usage:
+
+```python
+hangman_game = Hangman(["apple", "pear", "pineapple", "guava", "banana"])
+hangman_game.ask_for_input()
