@@ -39,12 +39,17 @@ The class also has the following methods:
 - `check_guess(self, guess)`: A method that checks if the guessed letter is in the word. It takes a `guess` parameter and compares it to the letters in the word. If the guess is correct, it updates the `word_guessed` list and decreases the `num_letters` count. If the guess is incorrect, it reduces the `num_lives` count.
 - `ask_for_input(self)`: A method that asks the player to input a letter guess. It validates the input and checks if the guess has already been made. If the input is valid and a new guess, it calls the `check_guess` method and updates the `list_of_guesses`.
 
-### Usage
+## Milestone 5
 
-To use the Hangman game, create an instance of the `Hangman` class with a word list and an optional number of lives. Then, call the `ask_for_input` method to start the game and interactively guess letters.
+The `milestone_5.py` script has been added to provide a complete game execution. It includes the following:
+
+- The `play_game` function: This function takes a `word_list` as a parameter. It sets the number of lives to 5, creates an instance of the `Hangman` class, and enters a while loop to continue the game until a game-over or victory condition is met. It calls the `ask_for_input` method to get the player's guesses and checks for the necessary conditions to break out of the loop. At the end, it prints appropriate messages indicating whether the player won or lost the game.
+
+To play the Hangman Game, run the `milestone_5.py` script and pass a list of words as an argument to the `play_game` function. The game will interactively prompt you for letter guesses and provide feedback on the correctness of your guesses.
 
 Example usage:
 
 ```python
-hangman_game = Hangman(["apple", "pear", "pineapple", "guava", "banana"])
-hangman_game.ask_for_input()
+word_list = ["apple", "pear", "pineapple", "guava", "banana"]
+play_game(word_list)
+
